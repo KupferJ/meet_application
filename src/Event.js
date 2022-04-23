@@ -1,8 +1,40 @@
 import React, { Component } from "react";
 
 class Event extends Component {
+
+  state = {
+    collapsed:true
+  }
+
+  handleOnClick = () => {
+    this.setState({
+      collapsed: !this.state.collapsed
+    });
+  }
+
   render() {
-    return <div></div>;
+    const { collapsed } =this.state;
+    const { event } =this.props;
+
+    return <div className="event">
+        <h3 className="summary">{event.summary}</h3>
+          <div className="starting-time">
+            {event.start.dateTime}
+            {/* <span>
+              {event.start.timeZone}
+            </span> */}
+            {/* <span>
+              {event.end.dateTime}
+            </span> */}
+          </div>
+          <div className="location">
+            {event.location}
+          </div>
+          <div className="description">
+            {event.description}
+          </div>
+      <button className={`${collapsed ? "show" : "hide"}-details`} onClick={this.handleOnClick}>{collapsed ? "Show" : "Hide"} Details</button>
+    </div>
   }
 }
 export default Event;
