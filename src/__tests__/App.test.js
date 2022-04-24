@@ -65,7 +65,7 @@ describe('<App /> integration', () => {
     AppWrapper.unmount();
   });
 
-  test('pass the number of events', () => {
+  test('App passes the number of events', () => {
     const AppWrapper = mount(<App />);
     const AppNumberOfEventsState = AppWrapper.state("numberOfEvents");
     expect(AppNumberOfEventsState).not.toEqual(undefined);
