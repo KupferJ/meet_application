@@ -14,7 +14,7 @@ describe('<NumberOfEvents /> component', () => {
   });
 
   test('render default number of events', () => {
-    expect(NumberOfEventsWrapper.state('numberOfEvents')).toBe('32');
+    expect(NumberOfEventsWrapper.state('numberOfEvents')).toBe(32);
   });
 
   test('change state when number input changes', () => {
