@@ -26,9 +26,9 @@ describe('<Event /> component', () => {
     expect(EventWrapper.find('.location')).toHaveLength(1);
   });
 
-  test('render a description', () => {
-    expect(EventWrapper.find('.description')).toHaveLength(1);
-  });
+  // test('render a description', () => {
+  //   expect(EventWrapper.find('.description')).toHaveLength(1);
+  // });
 
   // collapse button
   test('event details are collapsed by default', () => {
