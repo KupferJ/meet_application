@@ -52,5 +52,5 @@ defineFeature(feature, (test) => {
       expect(AppWrapper.find('.extra-details')).toHaveLength(0);
     });
   });
-  
+
 });
