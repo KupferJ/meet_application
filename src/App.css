@@ -23,7 +23,7 @@ body {
 
 
 .EventList li:hover {
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(233, 233, 233);
 }
 
 @media (max-width: 750px) {
@@ -37,22 +37,24 @@ body {
   border: .1em solid #b6b6b6;
   box-sizing: border-box;
   text-decoration: none;
-  font-size: small;
-  font-weight: 400;
+  font-size: 14px;
   color: #050505;
-  background-color: rgb(218, 218, 218);
+  /* background-color: rgb(218, 218, 218); */
+  background-color: rgb(0, 110, 255);
   text-align: center;
   transition: all .2s;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .show-details:hover, .hide-details:hover {
   color: #000;
-  background-color: #a5a5a5;
+  /* background-color: #a5a5a5; */
+  background-color: rgb(0, 153, 255);
   cursor: pointer;
 }
 .show-details:active, .hide-details:active {
   color: rgb(0, 0, 0);
-  background-color: #979797;
+  /* background-color: #979797; */
+  background-color: rgb(41, 201, 250);
   cursor: pointer;
 }
 
@@ -64,6 +66,14 @@ body {
   border: #646464;
   border-style: solid;
   border-width: .5px;
+}
+
+.Alert {
+  margin-left: -160px;
+}
+
+.CitySearch {
+  padding-top: 10px;
 }
 
 ul {
