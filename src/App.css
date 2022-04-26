@@ -35,12 +35,13 @@ body {
   float: right;
   padding: .45em 1.2em;
   border: .1em solid #b6b6b6;
+  border-radius: 5px;
   box-sizing: border-box;
   text-decoration: none;
   font-size: 14px;
   color: #050505;
   /* background-color: rgb(218, 218, 218); */
-  background-color: rgb(0, 110, 255);
+  background-color: rgb(0, 132, 255);
   text-align: center;
   transition: all .2s;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -67,13 +68,27 @@ body {
   border-style: solid;
   border-width: .5px;
 }
+.infoAlert {
+  position:fixed;
+  top: 8px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
 
-.Alert {
-  margin-left: -160px;
+.errorAlert {
+  position: relative;
+  margin-top: -20px;
 }
 
 .CitySearch {
-  padding-top: 10px;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 300px;
+  max-width: 300px;
+  margin: auto;
+  position: relative;
 }
 
 ul {
@@ -108,14 +123,6 @@ input[type="number"] {
   width: 250px;
 }
 
-.CitySearch {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 300px;
-  max-width: 300px;
-  margin: auto;
-  position: relative;
-}
 
 .suggestions {
   width: 250px;
@@ -194,11 +201,6 @@ input[type="number"] {
   grid-gap: 20px;
   padding: 20px;
   font-family: sans-serif;
-}
-
-.Alert {
-  position: fixed;
-  top: 20px;
 }
 
 .data-vis-wrapper {
