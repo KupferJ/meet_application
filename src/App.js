@@ -4,6 +4,7 @@ import EventList from './EventList.js';
 import CitySearch from './CitySearch';
 import { getEvents, extractLocations } from './api';
 import NumberOfEvents from './NumberOfEvents';
+import { OfflineAlert } from './Alert';
 
 class App extends Component {
 
@@ -11,7 +12,8 @@ class App extends Component {
     events: [],
     locations: [],
     numberOfEvents: 32,
-    location: 'all'
+    location: 'all',
+    offlineText: ''
   }
 
   componentDidMount() {
@@ -42,6 +44,15 @@ class App extends Component {
           currentLocation: location,
         });
       }
+      if (!navigator.onLine) {
+        this.setState({
+          offlineText: 'You appear to be offline. Events cannot be updated.',
+        });
+      } else {
+        this.setState({
+          offlineText: '',
+        });
+      }
     });
   };
 
@@ -58,8 +69,18 @@ class App extends Component {
   render() {
 
     return (
+
       <div className="App">
+        <div className="page-header">
+          Meet Application
+        </div>
+        <div className="city-search-header">
+          Enter a city near you
+        </div>
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
+        <div className="offlineAlert">
+          <OfflineAlert text={this.state.offlineText} />
+        </div>
         <NumberOfEvents updateNumberOfEvents={this.updateNumberOfEvents} />
         <EventList className="event-list" events={this.state.events} numberOfEvents={this.state.numberOfEvents}/>
       </div>
