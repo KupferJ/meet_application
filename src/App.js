@@ -77,10 +77,10 @@ class App extends Component {
         <div className="city-search-header">
           Enter a city near you
         </div>
-        <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
         <div className="offlineAlert">
           <OfflineAlert text={this.state.offlineText} />
         </div>
+        <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
         <NumberOfEvents updateNumberOfEvents={this.updateNumberOfEvents} />
         <EventList className="event-list" events={this.state.events} numberOfEvents={this.state.numberOfEvents}/>
       </div>
