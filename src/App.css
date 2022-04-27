@@ -8,6 +8,25 @@
   box-sizing: border-box;
 }
 
+.page-header {
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 40px;
+  font-size: 26px;
+  font-weight: 900;
+  text-shadow: 1px 1px 2px rgb(163, 163, 163);
+}
+
+.page-header:hover {
+  cursor: default;
+}
+
+
+.city-search-header {
+  text-align: center;
+  font-size: 12px;
+}
+
 /*trying out some styling*/
 body {
   background-color: #ffffff;
@@ -70,7 +89,7 @@ body {
 }
 .infoAlert {
   position:fixed;
-  top: 8px;
+  top: 15px;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
@@ -79,6 +98,14 @@ body {
 .errorAlert {
   position: relative;
   margin-top: -20px;
+}
+
+.offlineAlert {
+  position:fixed;
+  top: 22px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%); 
 }
 
 .CitySearch {
