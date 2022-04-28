@@ -118,6 +118,8 @@ body {
   position: relative;
 }
 
+
+
 ul {
   padding: 0;
   list-style: none;
@@ -175,7 +177,8 @@ input[type="number"] {
 }
 
 .suggestions > li:hover {
-  background-color: #bcdcdb;
+  background-color: #c3eceb;
+  cursor: pointer;
 }
 
 .event {
